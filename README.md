@@ -1,1 +1,0 @@
-# asetkotaserang.github.io
