@@ -2,9 +2,9 @@
 echo "*- Params: 'wet' or 'dry'"
 if [[ "$1" == "wet" ]]
  then
-  echo "sadmin@123" | sudo -S su root -c "rsync -zarmuv -R --max-size=49m --exclude='/home/sadmin/.deb-bak/' --include-from="/home/sadmin/.scripts/rsync-includes.conf" --exclude='*' / /home/sadmin/.deb-bak/snapshot/$(hostname)"
+  echo "sadmin@123" | sudo -S su root -c "rsync -zarmuv -R --max-size=29m --exclude='/home/sadmin/.deb-bak/' --include-from="/home/sadmin/.scripts/rsync-includes.conf" --exclude='*' / /home/sadmin/.deb-bak/snapshot/$(hostname)"
  else
-  echo "sadmin@123" | sudo -S su root -c "rsync -zarmuv -R --max-size=49m --exclude='/home/sadmin/.deb-bak/' --include-from="/home/sadmin/.scripts/rsync-includes.conf" --exclude='*' --dry-run / /home/sadmin/.deb-bak/snapshot/$(hostname)"
+  echo "sadmin@123" | sudo -S su root -c "rsync -zarmuv -R --max-size=29m --exclude='/home/sadmin/.deb-bak/' --include-from="/home/sadmin/.scripts/rsync-includes.conf" --exclude='*' --dry-run / /home/sadmin/.deb-bak/snapshot/$(hostname)"
 fi
 sleep 2
 echo Changing Owner.
