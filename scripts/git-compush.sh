@@ -1,5 +1,4 @@
 #!/bin/bash
-# [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]
 pushd /home/sadmin/.deb-bak/snapshot/
 sleep 2
 git fetch
