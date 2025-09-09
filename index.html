@@ -40,7 +40,8 @@ input[type="text" i] {
   </head>
   <body style="background-color:black; color:#11e311;">
     <center><h3>Bidang BMD - Kota Serang [Site's]</h3></center>
-2024-09-02-16-47 date.time.saved
+	<p id="lastModified">Updated: </p>
+	  2024-09-02-16-47 date.time.saved
 <script>
 function CpyTotClpBrd(cpdtx) {
   var copyText = document.getElementById(cpdtx);
@@ -57,5 +58,24 @@ setInterval('window.location.reload()', 11000);
 GitHub.com:Pages.
 </font>
 </div>
+<script>
+// Get the last modified date string
+const lastModifiedString = document.lastModified;
+// Create a Date object from the string
+const lastModifiedDate = new Date(lastModifiedString);
+// Extract components and pad with leading zeros if necessary
+const year = lastModifiedDate.getFullYear();
+const month = String(lastModifiedDate.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed
+const day = String(lastModifiedDate.getDate()).padStart(2, '0');
+const hours = String(lastModifiedDate.getHours()).padStart(2, '0');
+const minutes = String(lastModifiedDate.getMinutes()).padStart(2, '0');
+// Construct the formatted string
+const formattedDate = `${year}-${month}-${day} ${hours}:${minutes}`;
+console.log(formattedDate);
+document.title = "Bidang BMD - Kota Serang ("+formattedDate+")";
+
+const date = new Date(document.lastModified);
+document.getElementById("lastModified").innerHTML = "Updated: ("+formattedDate+")";
+</script>
   </body>
 </html>
